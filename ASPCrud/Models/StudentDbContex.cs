@@ -5,14 +5,15 @@ namespace ASPCrud.Models
 {
 	public class StudentDbContex : DbContext
 	{
-		public StudentDbContex(DbContextOptions options ):base(options)
+		public StudentDbContex(DbContextOptions<StudentDbContex> options ):base(options)
 		{
 		}
 
 		public DbSet<Student> students { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-			optionsBuilder.UseSqlServer("");
+			optionsBuilder.UseSqlServer("Data Source =./ ; Intial Catalog =Lbs; User Id=SA; passwprd=Popill786@; TrustServerCertificate=True"); 
             base.OnConfiguring(optionsBuilder);
         }
 
