@@ -13,7 +13,8 @@ namespace ASPCrud.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-			optionsBuilder.UseSqlServer("Data Source =./ ; Intial Catalog =Lbs; User Id=SA; passwprd=Popill786@; TrustServerCertificate=True"); 
+            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=Lbs;User Id=SA;Password=Popill786@;TrustServerCertificate=True");
+
             base.OnConfiguring(optionsBuilder);
         }
 
